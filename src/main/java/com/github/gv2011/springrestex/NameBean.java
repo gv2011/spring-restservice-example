@@ -14,8 +14,7 @@ public class NameBean {
 		return id;
 	}
 
-	public String getName
-	() {
+	public String getName() {
 		return name;
 	}
 }

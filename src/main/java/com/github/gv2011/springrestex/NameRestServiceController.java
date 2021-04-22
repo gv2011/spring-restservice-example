@@ -18,12 +18,7 @@ public class NameRestServiceController {
   }
 
   @GetMapping("/phones/{phoneId}")
-  public PhoneBean phones(@PathVariable String phoneId) {
-    return new PhoneBean(){
-      @Override
-      public String number() {return "+1 234 567";}
-      @Override
-      public String type() {return "fax";}
-    };
+  public PhoneBean phones(@PathVariable PhoneId phoneId) {
+    return new PhoneBeanImp(phoneId, "fax", "+49 1234");
   }
 }
